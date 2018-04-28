@@ -10,7 +10,7 @@ w2sp = open("withtwospacesuggestions.txt", 'w')
 
 # Without Space
 permut = list(itertools.permutations(letters))
-for i in range(0,len(permut)) :
+for i in range(0, len(permut)):
     wosp.write(str(spell(''.join(permut[i])))+'\n')
 wosp.close()
 # With one Space

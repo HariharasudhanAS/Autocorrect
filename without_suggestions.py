@@ -3,7 +3,7 @@ import itertools
 c=0
 dict = enchant.Dict("en_US")
 letters = input()
-wosp = open("withoutspace.txt",'w')
+wosp = open("withoutspace.txt", 'w')
 w1sp = open("withonespace.txt", 'w')
 w2sp = open("withtwospace.txt", 'w')
 
@@ -25,7 +25,7 @@ for i in range(0,len(permutwithspace)) :
     strings = ''.join(permutwithspace[i])
     strings = strings.split()
     for j in strings :
-        if dict.check(j) == True :
+        if dict.check(j) == True:
             c+=1
     if c==2:
         w1sp.write(str(strings[0]+' '+strings[1])+'\n')
@@ -47,4 +47,5 @@ for i in range(0,len(permutwith2space)) :
     if c==3:
         w2sp.write(str(strings[0]+' '+strings[1]+' '+strings[2])+'\n')
 w2sp.close()
+
 
